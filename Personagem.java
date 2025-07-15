@@ -1,5 +1,4 @@
 public class Personagem {
-
     public String nome;
     public String classe;
     public int nivel;
@@ -10,8 +9,8 @@ public class Personagem {
     public Personagem(String nome, String classe, int nivel, int vida, int mana, int forca) {
         this.nome = nome;
         this.classe = classe;
-        this.nivel = 1;
-        this.vida = 100;
+        this.nivel = nivel;
+        this.vida = vida;
         this.mana = mana;
         this.forca = forca;
     }
@@ -42,12 +41,21 @@ public class Personagem {
         System.out.println("\nStatus do personagem:");
         System.out.println("Nome: " + nome);
         System.out.println("Classe: " + classe);
-        System.out.println("Nível: " + nivel);
+        System.out.println("Nivel: " + nivel);
         System.out.println("Vida: " + vida);
         System.out.println("Mana: " + mana);
-        System.out.println("Força: " + forca);
+        System.out.println("Forca: " + forca);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public boolean estaVivo() {
+        return vida > 0;
     }
 }
+
 
 class Mago extends Personagem {
     public Mago(String nome) {
@@ -66,11 +74,13 @@ class Mago extends Personagem {
         System.out.println(nome + " usa feitiço de Ilusão no adversário!");
     }
 
-     public void desenhar() {
-        System.out.println("====== MAGO: " + nome + " ======");
-        System.out.println("(∩｀-´)⊃━☆ﾟ.*･｡ﾟ");
-        System.out.println("   Magia!");
-    }
+    public void desenhar() {
+    System.out.println("====== MAGO: " + nome + " ======");
+    System.out.println("     O");
+    System.out.println("    /|\\     ");
+    System.out.println("    / \\");
+}
+
 }
 
 
@@ -92,11 +102,13 @@ class Guerreiro extends Personagem {
         System.out.println(nome + " usa espada de fogo!");
     }
 
-     public void desenhar() {
-        System.out.println("====== GUERREIRO: " + nome + " ======");
-        System.out.println("O==[:::::::>");
-        System.out.println("   Lutando!");
-    }
+public void desenhar() {
+    System.out.println("====== GUERREIRO: " + nome + " ======");
+    System.out.println("     O");
+    System.out.println("    /|\\     ");
+    System.out.println("    / \\");
+}
+
 }
 
 
@@ -118,8 +130,9 @@ class Arqueiro extends Personagem {
     }
 
       public void desenhar() {
-        System.out.println("====== ARQUEIRO: " + nome + " ======");
-        System.out.println("︻デ═一");
-        System.out.println("   Mira certeira!");
-    }
+    System.out.println("====== ARQUEIRO: " + nome + " ======");
+    System.out.println("     O");
+    System.out.println("    /|\\     ");
+    System.out.println("    / \\");
+}
 }
