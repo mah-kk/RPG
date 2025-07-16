@@ -1,4 +1,4 @@
-class Personagem {
+public class Personagem {
     public String nome;
     public String classe;
     public int nivel;
@@ -41,10 +41,10 @@ class Personagem {
         System.out.println("\nStatus do personagem:");
         System.out.println("Nome: " + nome);
         System.out.println("Classe: " + classe);
-        System.out.println("Nível: " + nivel);
+        System.out.println("Nivel: " + nivel);
         System.out.println("Vida: " + vida);
         System.out.println("Mana: " + mana);
-        System.out.println("Força: " + forca);
+        System.out.println("Forca: " + forca);
     }
 
     public String getNome() {
@@ -54,11 +54,8 @@ class Personagem {
     public boolean estaVivo() {
         return vida > 0;
     }
-
-    public void desenhar() {
-        System.out.println("Personagem genérico.");
-    }
 }
+
 
 class Mago extends Personagem {
     public Mago(String nome) {
@@ -78,12 +75,15 @@ class Mago extends Personagem {
     }
 
     public void desenhar() {
-        System.out.println("====== MAGO: " + nome + " ======");
-        System.out.println("     O");
-        System.out.println("    /|\\");
-        System.out.println("    / \\");
-    }
+    System.out.println("====== MAGO: " + nome + " ======");
+    System.out.println("     O");
+    System.out.println("    /|\\     ");
+    System.out.println("    / \\");
 }
+
+}
+
+
 
 class Guerreiro extends Personagem {
     public Guerreiro(String nome) {
@@ -102,13 +102,15 @@ class Guerreiro extends Personagem {
         System.out.println(nome + " usa espada de fogo!");
     }
 
-    public void desenhar() {
-        System.out.println("====== GUERREIRO: " + nome + " ======");
-        System.out.println("     O");
-        System.out.println("    /|\\");
-        System.out.println("    / \\");
-    }
+public void desenhar() {
+    System.out.println("====== GUERREIRO: " + nome + " ======");
+    System.out.println("     O");
+    System.out.println("    /|\\     ");
+    System.out.println("    / \\");
 }
+
+}
+
 
 class Arqueiro extends Personagem {
     public Arqueiro(String nome) {
@@ -127,10 +129,10 @@ class Arqueiro extends Personagem {
         System.out.println(nome + " usa Flecha Explosiva!");
     }
 
-    public void desenhar() {
-        System.out.println("====== ARQUEIRO: " + nome + " ======");
-        System.out.println("     O");
-        System.out.println("    /|\\");
-        System.out.println("    / \\");
-    }
+      public void desenhar() {
+    System.out.println("====== ARQUEIRO: " + nome + " ======");
+    System.out.println("     O");
+    System.out.println("    /|\\     ");
+    System.out.println("    / \\");
+}
 }
